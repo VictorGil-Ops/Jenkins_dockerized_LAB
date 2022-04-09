@@ -1,15 +1,10 @@
-# DEXMA DevOps / System Engineer Test
-
 ## Deployment
 
-Execute in your console:
-  ```docker-compose up -d```
+A Dockerized django and redis app
 
-## Requirements
+## Installation
 
-* Docker
-* Docker Compose
+**Prerequisites:**
+- Docker >= 19.03.13
 
-## Why this solution?
-
-I have adopted this solution as it is as simple as possible, I have also used docker and docker-compose as it seemed the fastest way to implement this test with my current knowledge.
+To install Docker Engine follow steps given in [Install Docker Engine](https://docs.docker.com/engine/install/).
