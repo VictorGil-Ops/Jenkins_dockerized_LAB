@@ -1,14 +1,14 @@
 ﻿pipeline {
   environment {
-    imagename = "orejasdetrapo/Jenkins-SCM"
-    registryCredential = 'orejasdetrapo'
+    imagename = "VictorGil-sys/Jenkins-SCM"
+    registryCredential = 'Jenkins-SCM'
     dockerImage = ''
   }
   agent any
   stages {
     stage('Cloning Git') {
       steps {
-        git([url: 'https://github.com/VictorGil-sys/Jenkins-SCM.git', branch: 'main', credentialsId: ''])
+        git([url: 'https://github.com/VictorGil-sys/Jenkins-SCM.git', branch: 'main', credentialsId: 'kevalnagda'])
 
       }
     }
