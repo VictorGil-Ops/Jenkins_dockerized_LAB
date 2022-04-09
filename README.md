@@ -51,4 +51,4 @@ Install Suggested Plugins and later, from Plugin Manager:
 
 1. Create credentials for Docker 
 
-![](https://github.com/VictorGil-sys/Jenkins-SCM/blob/main/images/2-Credentials.png)
+![](https://github.com/VictorGil-sys/Jenkins-SCM/blob/main/images/3-Credentials.png)
