@@ -48,6 +48,7 @@ Install Suggested Plugins and later, from Plugin Manager:
 ```
 - Docker Pipeline
 - Git Plugin
+- Docker Compose Build Step
 ```
 
 # CREATE a Jobs
