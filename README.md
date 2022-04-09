@@ -9,6 +9,9 @@ Jenkins build and publish images on Docker Hub.
 
 To install Docker Engine follow steps given in [Install Docker Engine](https://docs.docker.com/engine/install/).
 
+- Docker Compose
+[Install Docker Compose]( ).
+
 ## Usage
 
 1. Clone the project locally
@@ -29,7 +32,7 @@ docker-compose up -d
 http://127.0.0.1:8080
 ```
 
-Use the initial password, show in '/var/jenkins_home/secrets/initialAdminPassword' or on container logs:
+Use the initial password, show in '/var/jenkins_home/secrets/initialAdminPassword' or show it in container logs:
 
 ```
 docker logs jenkins-container
@@ -49,12 +52,11 @@ Install Suggested Plugins and later, from Plugin Manager:
 
 # CREATE a Jobs
 
-1. Create credentials for Docker 
+1. Create credentials for Docker Hub and Github repo
 
 ![](https://github.com/VictorGil-sys/Jenkins-SCM/blob/main/images/3-Credentials.png)
 
 2. Create Pipeline
 
 ![](https://github.com/VictorGil-sys/Jenkins-SCM/blob/main/images/4-Create_pipeline.png)
-
 
