@@ -29,4 +29,23 @@ docker-compose up -d
 http://127.0.0.1:8080
 ```
 
+Use the initial password, show in '/var/jenkins_home/secrets/initialAdminPassword' or on container logs:
+
+```
+docker logs jenkinscontainer
+```
+![](https://github.com/VictorGil-sys/Jenkins-SCM/blob/main/images/2-credentials.png)
+
+
 ![](https://github.com/VictorGil-sys/Jenkins-SCM/blob/main/images/1-Jenkins_started.png)
+
+4. Install Plugins
+
+Install Suggested Plugins and from Plugin Manager:
+```
+- Docker Pipeline
+- Git Plugin
+```
+
+# CREATE a Jobs
+
