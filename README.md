@@ -29,4 +29,4 @@ docker-compose up -d
 http://127.0.0.1:8080
 ```
 
-![](https://github.com/VictorGil-sys/Jenkins-SCM/blob/main/images/1-Jenkins_started.png
+![](https://github.com/VictorGil-sys/Jenkins-SCM/blob/main/images/1-Jenkins_started.png)
