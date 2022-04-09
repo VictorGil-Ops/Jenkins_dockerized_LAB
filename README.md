@@ -1,6 +1,6 @@
 # Jenkins-SCM
 
-Jenkins build and publish images in Docker Hub.
+Jenkins build and publish images on Docker Hub.
 
 ## Installation
 
@@ -52,3 +52,9 @@ Install Suggested Plugins and later, from Plugin Manager:
 1. Create credentials for Docker 
 
 ![](https://github.com/VictorGil-sys/Jenkins-SCM/blob/main/images/3-Credentials.png)
+
+2. Create Pipeline
+
+![](https://github.com/VictorGil-sys/Jenkins-SCM/blob/main/images/4-Create_pipeline.png)
+
+
