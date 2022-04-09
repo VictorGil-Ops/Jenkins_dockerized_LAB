@@ -1,6 +1,6 @@
 ﻿pipeline {
   environment {
-    imagename = "orejasdetrapo/Jenkins-SCM"
+    imagename = "orejasdetrapo/djangoapp"
     registryCredential = 'orejasdetrapo'
     dockerImage = ''
   }
