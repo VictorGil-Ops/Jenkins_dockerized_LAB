@@ -15,11 +15,7 @@
     stage('Building image') {
       steps{
         script {
-          sh '''
-            docker-compose --version
-            docker --version
-            docker-compose build
-        '''
+          sh docker-compose --version
         }
       }
     }
