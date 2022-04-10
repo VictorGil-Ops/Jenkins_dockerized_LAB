@@ -2,7 +2,7 @@ version: '3'
 
 services:
   app:
-    container_name: djangoapp
+    image: django_app_app:latest
     build:
       context: .
     ports:
@@ -20,14 +20,15 @@ services:
       - db
 
   db:
-    image: postgres:10-alpine
+    image: django_app_postgres:latest
     env_file:
       - ./.env.dev
     volumes: 
       - pgdata:/var/lib/postgresql/data
   redis:
-    image: redis:alpine
+    image: django_app_redis:latest
   celery:
+    image: django_app_celery:latest
     restart: always
     build:
       context: .
