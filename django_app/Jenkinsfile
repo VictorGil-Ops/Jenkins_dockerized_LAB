@@ -33,8 +33,14 @@ pipeline {
       steps{
         script {
           docker.withRegistry( '', registryCredential ) {
+            dockerImage = "django_app_app"
             dockerImage.push("$BUILD_NUMBER")
-            dockerImage.push('latest')   
+            dockerImage.push('latest')
+
+            dockerImage = "django_app_celery"
+            dockerImage.push("$BUILD_NUMBER")
+            dockerImage.push('latest')
+
           }
         }
       }
