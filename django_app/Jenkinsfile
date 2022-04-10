@@ -25,7 +25,7 @@ pipeline {
     stage('Building image and Deploy image') {
       steps{
        script {
-          dockerImage = sh(script: "/usr/bin/docker-compose build -f ./django_app/docker-compose.yaml")
+          dockerImage = sh(script: "/usr/bin/docker-compose -f ./django_app/docker-compose.yaml build")
       }
      }
     } 
