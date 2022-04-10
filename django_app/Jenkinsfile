@@ -25,8 +25,7 @@ pipeline {
     stage('Building image and Deploy image') {
       steps{
        script {
-          dockerImage = sh(script: "/usr/bin/docker-compose build")
-          dockerImage = docker.image(imagename).inside
+          dockerImage = sh(script: "/usr/bin/docker-compose build $imagename")
     
       }
      }
@@ -36,7 +35,7 @@ pipeline {
         script {
           docker.withRegistry( '', registryCredential ) {
             dockerImage.push("$BUILD_NUMBER")
-             dockerImage.push('latest')   
+            dockerImage.push('latest')   
           }
         }
       }
