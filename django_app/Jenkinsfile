@@ -22,7 +22,7 @@ pipeline {
 
       }
     }
-    stage('Building image and Deploy image') {
+    stage('Building image') {
       steps{
        script {
           dockerImage = sh(script: "/usr/bin/docker-compose -f ./django_app/docker-compose.yaml build")
@@ -33,13 +33,7 @@ pipeline {
       steps{
         script {
           docker.withRegistry( '', registryCredential ) {
-            dockerImage = "django_app_app"
-            dockerImage.push("$BUILD_NUMBER")
-            dockerImage.push('latest')
-
-            dockerImage = "django_app_celery"
-            dockerImage.push("$BUILD_NUMBER")
-            dockerImage.push('latest')
+            dockerImage = sh(script: "/usr/bin/docker-compose -f ./django_app/docker-compose.yaml push")
 
           }
         }
