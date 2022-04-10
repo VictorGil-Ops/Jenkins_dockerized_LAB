@@ -25,7 +25,8 @@ pipeline {
     stage('Building image') {
       steps{
        script {
-          dockerImage = sh(script: "/usr/bin/docker-compose build")
+          dockerImage = sh(script: "/usr/bin/docker-compose build --pull")
+          dockerImage = sh(script: "docker tag $imagename")
       }
      }
     } 
@@ -33,7 +34,8 @@ pipeline {
       steps{
         script {
           docker.withRegistry( '', registryCredential ) {
-            dockerImage = sh(script: "/usr/bin/docker-compose push")
+              dockerImage.push("$BUILD_NUMBER")
+             dockerImage.push('latest')
           }
         }
       }
