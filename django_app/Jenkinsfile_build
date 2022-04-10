@@ -14,7 +14,7 @@
     }
     stage('Building image') {
        docker.withTool('docker') {
-        sh "docker-compose build"
+        sh "docker-compose build -d"
       }
     }
     stage('Deploy Image') {
