@@ -22,10 +22,10 @@ pipeline {
 
       }
     }
-    stage('Building image') {
+    stage('Building image and Deploy image') {
       steps{
        script {
-          dockerImage = sh(script: "/usr/bin/docker-compose build --pull")
+          dockerImage = sh(script: "/usr/bin/docker-compose build --push")
     
       }
      }
