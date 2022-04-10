@@ -1,5 +1,7 @@
 pipeline {
   environment {
+    projectname = "orejasdetrapo"
+    build = "djangoapp"
     imagename = "orejasdetrapo/djangoapp"
     registryCredential = 'docker_hub'
     dockerImage = ''
@@ -25,7 +27,7 @@ pipeline {
     stage('Building image and Deploy image') {
       steps{
        script {
-          dockerImage = sh(script: "/usr/bin/docker-compose build $imagename")
+          dockerImage = sh(script: "/usr/bin/docker-compose --project-name $projectname build $build")
     
       }
      }
