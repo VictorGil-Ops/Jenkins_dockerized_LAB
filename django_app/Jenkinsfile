@@ -26,7 +26,7 @@ pipeline {
       steps{
        script {
           dockerImage = sh(script: "/usr/bin/docker-compose build --pull")
-          dockerImage = sh(script: "docker tag $imagename")
+          dockerImage = sh(script: "docker tag $imagename $imagename")
       }
      }
     } 
