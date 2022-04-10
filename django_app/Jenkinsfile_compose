@@ -8,13 +8,15 @@
   stages {
     stage('Cloning Git') {
       steps {
-        git([url: 'https://github.com/VictorGil-sys/movieapp.git', branch: 'main', credentialsId: 'github'])
+        git([url: 'https://github.com/VictorGil-sys/Jenkins-SCM.git', branch: 'main', credentialsId: 'github'])
 
       }
     }
-    stage('Building image') {
-      steps{
-          sh "/usr/bin/docker-compose --version"
+    stage('docker-compose') {
+           steps {
+              sh "docker-compose build"
+              sh "docker-compose up -d"
+        }
       }
     }
     stage('Deploy Image') {
