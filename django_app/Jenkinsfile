@@ -26,7 +26,7 @@ pipeline {
       steps{
        script {
           dockerImage = sh(script: "/usr/bin/docker-compose build --pull")
-          dockerImage = sh(script: "docker tag $imagename $imagename")
+    
       }
      }
     } 
@@ -34,8 +34,14 @@ pipeline {
       steps{
         script {
           docker.withRegistry( '', registryCredential ) {
-              dockerImage = sh(script: "/usr/bin/docker-compose push $imagename:$BUILD_NUMBER")
-              dockerImage = sh(script: "/usr/bin/docker-compose push $imagename:latest")
+              dockerImage = sh(script: "/usr/bin/docker-compose push docker-django-redis-celery-main_app:$BUILD_NUMBER")
+              dockerImage = sh(script: "/usr/bin/docker-compose push docker-django-redis-celery-main_app:latest")
+              
+              dockerImage = sh(script: "/usr/bin/docker-compose push docker-django-redis-celery-main_celery:$BUILD_NUMBER")
+              dockerImage = sh(script: "/usr/bin/docker-compose push docker-django-redis-celery-main_celery:latest")
+
+              dockerImage = sh(script: "/usr/bin/docker-compose push dockerized_django_app_backend:$BUILD_NUMBER")
+              dockerImage = sh(script: "/usr/bin/docker-compose push dockerized_django_app_backend:latest")
           }
         }
       }
