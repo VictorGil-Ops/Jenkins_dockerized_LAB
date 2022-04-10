@@ -25,7 +25,7 @@ pipeline {
     stage('Building image') {
       steps{
        script {
-          dockerImage = sh(script: "/usr/bin/docker-compose build -d") imagename
+          dockerImage = sh(script: "/usr/bin/docker-compose build")
       }
      }
     } 
