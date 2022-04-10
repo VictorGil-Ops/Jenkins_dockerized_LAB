@@ -14,7 +14,7 @@
     }
     stage('Building image') {
       steps{
-          sh docker-compose --version
+          sh 'docker-compose --version'
       }
     }
     stage('Deploy Image') {
