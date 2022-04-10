@@ -23,7 +23,7 @@ git clone https://github.com/VictorGil-sys/Jenkins-SCM.git
 2. Run a docker-compose
 
 ```
-docker-compose up -d
+docker-compose -f ./Jenkins-Container/docker-compose.yaml up -d
 ```
 
 3. Runnning application
@@ -35,8 +35,9 @@ http://127.0.0.1:8080
 Use the initial password, show in '/var/jenkins_home/secrets/initialAdminPassword' or show it in container logs:
 
 ```
-docker logs jenkins-container
+docker exec jenkins-container cat /var/jenkins_home/secrets/initialAdminPassword
 ```
+
 ![](https://github.com/VictorGil-sys/Jenkins-SCM/blob/main/images/2-Started_credentials.png)
 
 
@@ -61,3 +62,8 @@ Install Suggested Plugins and later, from Plugin Manager:
 
 ![](https://github.com/VictorGil-sys/Jenkins-SCM/blob/main/images/4-Create_pipeline.png)
 
+3. Configure pipeline
+
+![](https://github.com/VictorGil-sys/Jenkins-SCM/blob/main/images/5-Configure_pipeline1.png)
+
+![](https://github.com/VictorGil-sys/Jenkins-SCM/blob/main/images/6-Configure_pipeline2.png)
