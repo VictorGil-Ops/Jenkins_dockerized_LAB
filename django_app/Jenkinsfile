@@ -24,7 +24,7 @@ pipeline {
     }
     stage('Building image') {
       steps{
-          dockerimage = sh "/usr/bin/docker-compose --project-name djangoapp build -d"
+          dockerImage = sh "/usr/bin/docker-compose --project-name djangoapp build -d"
       }
     }
     stage('Deploy Image') {
