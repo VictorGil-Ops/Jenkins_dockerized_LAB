@@ -12,10 +12,10 @@
 
       }
     }
-    stage('docker-compose') {
-           steps {
-              sh "docker-compose build"
-              sh "docker-compose up -d"
+    stage('Building image') {
+      steps{
+        script {
+          dockerImage = docker.build imagename
         }
       }
     }
