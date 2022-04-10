@@ -1,4 +1,4 @@
-﻿pipeline {
+pipeline {
   environment {
     imagename = "orejasdetrapo/djangoapp"
     registryCredential = 'docker_hub'
