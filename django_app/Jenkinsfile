@@ -5,17 +5,17 @@
     dockerImage = ''
   }
   agent any
-  stage("verify tooling"){
-    steps{
-      sh '''
-        dcoker info
-        docker version
-        docker-compose version
-        curl --version
-      '''
-    }
-  }
   stages {
+     stage("verify tooling"){
+      steps{
+        sh '''
+          dcoker info
+          docker version
+          docker-compose version
+          curl --version
+        '''
+     }
+    }
     stage('Cloning Git') {
       steps {
         git([url: 'https://github.com/VictorGil-sys/Jenkins-SCM.git', branch: 'main', credentialsId: 'github'])
