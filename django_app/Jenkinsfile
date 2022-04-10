@@ -26,7 +26,7 @@ pipeline {
       steps{
        script {
           dockerImage = sh(script: "/usr/bin/docker-compose build")
-          dockerImage = docker.build imagename
+          dockerImage = docker.image(imagename).inside
     
       }
      }
