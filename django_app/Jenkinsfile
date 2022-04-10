@@ -33,7 +33,9 @@ pipeline {
       steps{
         script {
           docker.withRegistry( '', registryCredential ) {
-            dockerImage = sh(script: "/usr/bin/docker-compose -f ./django_app/docker-compose.yaml push")
+             dockerImage.image('django_app_app').inside
+             dockerImage.push("$BUILD_NUMBER")
+             dockerImage.push('latest')
 
           }
         }
