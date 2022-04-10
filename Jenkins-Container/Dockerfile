@@ -17,7 +17,8 @@ RUN add-apt-repository \
 RUN apt-get update -qq \
     && apt-get install docker-ce -y
 
-COPY plugins.txt /usr/share/jenkins/plugins.txt
-RUN jenkins-plugin-cli --plugin-file /usr/share/jenkins/plugins.txt
+RUN jenkins-plugin-cli --plugins docker-compose-build-step:1.0
+RUN jenkins-plugin-cli --plugins docker-workflow:1.28
+RUN jenkins-plugin-cli --plugins python:1.3
 
 RUN usermod -aG docker jenkins
