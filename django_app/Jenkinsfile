@@ -5,6 +5,16 @@
     dockerImage = ''
   }
   agent any
+  stage("verify tooling"){
+    steps{
+      sh '''
+        dcoker info
+        docker version
+        docker-compose version
+        curl --version
+      '''
+    }
+  }
   stages {
     stage('Cloning Git') {
       steps {
