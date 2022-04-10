@@ -13,8 +13,8 @@
       }
     }
     stage('Building image') {
-      steps{
-          sh "/usr/bin/docker-compose build"
+       docker.withTool('docker') {
+        sh "docker-compose build"
       }
     }
     stage('Deploy Image') {
