@@ -1,5 +1,4 @@
-anyjson==0.3.3
-Flask>=1.0.0
-redis==2.10.5
-structlog==16.1.0
-pytz==2016.10
+Django>=2.2
+celery==4.4.1
+redis==3.4.1
+psycopg2>=2.7.5,<2.8.0
