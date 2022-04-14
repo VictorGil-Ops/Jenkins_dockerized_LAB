@@ -67,3 +67,6 @@ Install Suggested Plugins and later, from Plugin Manager:
 ![](https://github.com/VictorGil-sys/Jenkins-SCM/blob/main/images/5-Configure_pipeline1.png)
 
 ![](https://github.com/VictorGil-sys/Jenkins-SCM/blob/main/images/6-Configure_pipeline2.png)
+
+4. Configure SCM
+#TODO
