@@ -1,4 +1,4 @@
-# Jenkins-SCM
+# Jenkins_dockerized_LAB
 
 Jenkins build and publish images on Docker Hub.
 
