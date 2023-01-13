@@ -17,7 +17,7 @@ To install Docker Engine follow steps given in [Install Docker Engine](https://d
 1. Clone the project locally
 
 ```
-git clone https://github.com/VictorGil-sys/Jenkins-SCM.git
+git clone https://github.com/VictorGil-Ops/Jenkins_dockerized_LAB.git
 ```
 
 2. Run a docker-compose
